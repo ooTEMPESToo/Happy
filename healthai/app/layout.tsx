@@ -14,6 +14,11 @@ const notoSans = Noto_Sans({
   variable: '--font-noto-sans',
 });
 
+export const metadata = {
+  title: "HealthSync",
+  description: "Connect with doctors by specialty",
+};
+
 export default function RootLayout({
   children,
 }: {
