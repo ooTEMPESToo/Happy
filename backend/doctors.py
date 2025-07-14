@@ -1,5 +1,4 @@
 # doctors.py
-
 doctors_data = [
     {
         "id": "doc1",

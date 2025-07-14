@@ -346,3 +346,17 @@ def get_doctor_by_id(doctor_id):
     except Exception as e:
         print(f"Error fetching doctor by ID: {e}")
         return jsonify({"error": "Failed to fetch doctor", "details": str(e)}), 500
+    
+
+@doctors_bp.route('/specialties', methods=['GET'])
+@jwt_required()
+def get_specialties():
+    """
+    Returns a list of unique doctor specialties.
+    """
+    try:
+        specialties = doctors_collection.distinct("specialty")
+        return jsonify(specialties), 200
+    except Exception as e:
+        print(f"Error fetching specialties: {e}")
+        return jsonify({"error": "Failed to fetch specialties"}), 500

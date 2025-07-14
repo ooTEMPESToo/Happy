@@ -71,7 +71,7 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(predict_bp)
 app.register_blueprint(history_bp)
 app.register_blueprint(ask_ai_bp)
-app.register_blueprint(doctors_bp, strict_slashes=False)
+app.register_blueprint(doctors_bp)
 
 # Error handler for rate limit exceeded
 @app.errorhandler(RateLimitExceeded)
